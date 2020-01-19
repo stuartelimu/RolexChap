@@ -1,0 +1,1 @@
+web: gunicorn RolexChap.wsgi --log-file -
