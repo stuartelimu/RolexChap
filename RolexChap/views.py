@@ -27,7 +27,8 @@ def webhook(request):
 
     if salads:
         text = f"{item}: {quantity}, \n{item1}: {quantity1}, \nSalads: {salads} \n\nTotal: {total}"
-    text = f"{item}: {quantity}, \n{item1}: {quantity1}, \n\nTotal: {total}"
+    else:
+        text = f"{item}: {quantity}, \n{item1}: {quantity1}, \n\nTotal: {total}"
 
 
     return JsonResponse({"fulfillmentText": text}, safe=False)
